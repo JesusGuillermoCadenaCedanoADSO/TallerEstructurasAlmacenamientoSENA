@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+ }
+
+nav,
+main,
+header,
+footer{
+    padding: 16px;
+    text-align: center;
+}
+
+.lista-navegacion{
+    background-color: teal;
+    align-items: center;
+    min-height: 8vh;
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.lista-navegacion a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 14px 16px;
+}
+
+.lista-navegacion li{
+    list-style: none;
+}
+
+.lista-navegacion li a:hover:not(.active){
+    background-color: lightseagreen;
+}
+
+
+
