@@ -7,6 +7,9 @@
     <title>Evidencia de desempeño: GA3-220501093-AA3-EV02</title>
     <link rel="stylesheet" href="../style.css">
     <style type="text/css">
+            .tabla {
+                 padding: 5%;
+            }
             table {
                 background: rgba(128, 255, 0, 0.3);
                 margin: 0 auto;
@@ -16,7 +19,18 @@
             th, td {
                 border: 1px solid #000;
             }
-            p {
+            
+            label {
+                font-size: large;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+            }
+            .figuras {
+                font-size: large;
+            }
+            .btn-Calcular {
                 font-size: large;
             }
     </style>
@@ -30,8 +44,8 @@
     <nav>
         <ul class ="lista-navegacion">
             <li class ="item-navegacion"><a href="../index.html">Inicio</a></li>
-            <li class ="item-navegacion"><a href="ejercicios/ejercicio_2.html">Siguiente</a></li>
             <li class ="item-navegacion"><a href="../index.html">Anterior</a></li>
+            <li class ="item-navegacion"><a href="Ejercicio_2.html">Siguiente</a></li>
             <li class ="item-navegacion"><a href="#">Ultimo</a></li>
         </ul>
     </nav>
@@ -39,7 +53,7 @@
         <h1>EJERCICIO 1</h1>
         <p>Desarrollar un programa que permita calcular el área o perímetro de algunas figuras planas según la 
             siguiente tabla:</p>
-            <div style="text-align: center;">
+            <div class="tabla">
                 <table>
                     <tr>
                         <th>Figura</th>
@@ -47,27 +61,43 @@
                         <th>Área</th>
                     </tr>
                     <tr>
-                        <th><img src="../img/LogoSENA.png"></th>
+                        <th>Triángulo rectángulo<br><img src="../img/Triangulo.PNG"></br></th>
                         <td>a + b + c</td>
-                        <td>(b x h) / 2</td>
+                        <td>(b x a) / 2</td>
                     </tr>
                     <tr>
-                        <th>Rectángulo</th>
+                        <th>Rectángulo<br><img src="../img/Rectangulo.PNG"></br></th>
                         <td>2 x (b + a)</td>
                         <td>b x a</td>
                     </tr>
                     <tr>
-                        <th>Cuadrado</th>
+                        <th>Cuadrado<br><img src="../img/Cuadrado.PNG"></br></th>
                         <td>4 x a</td>
                         <td>a ^ 2</td>
                     </tr>
                     <tr>
-                        <th>Círculo</th>
+                        <th>Círculo<br><img src="../img/Circulo.PNG"></br></th>
                         <td>2 x Pi x r</td>
                         <td>Pi x r ^ 2</td>
                     </tr>
                 </table>
+               
             </div>
+            <form name="CalcularAreaPerimetro" action="#">
+                <label for="figure">Calcular perímetro y área de figura seleccionada</label><br>
+                <select class="figuras" id="figure">
+                  <option value="selecciona">Seleccionar una figura</option>
+                  <option value="triangulo">Triángulo rectángulo</option>
+                  <option value="rectangulo">Rectángulo</option>
+                  <option value="cuadrado">Cuadrado</option>
+                  <option value="circulo">Círculo</option>
+                </select>
+                <button class="btn-Calcular">Calcular</button>
+          </form>
+          <p id="figura_seleccionada"></p>
+          <p id="resultado_perimetro"></p>
+          <p id="resultado_area"></p>
+          <script src="Ejercicio_1.js"></script>
     </main>
     <footer><img src="/img/LogoSENA.png"></footer>
 </body>
