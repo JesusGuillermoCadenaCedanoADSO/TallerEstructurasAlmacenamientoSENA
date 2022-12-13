@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidencia de desempeño: GA3-220501093-AA3-EV02</title>
+    <link rel="stylesheet" href="../style.css">
+    <style type="text/css">
+        .tablas {
+                padding: 2%;
+            }
+        .btn-Calcular {
+            font-size: large;
+        }
+        .lista_opciones {
+            text-align: left;
+        }
+        .lista_opciones .opcion{
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RESOLUCIÓN A PROBLEMAS ALGORÍTMICOS 
+            APLICANDO ESTRUCTURAS DE ALMACENAMIENTO</h1>
+    </header>
+    <aside></aside>
+    <nav>
+        <ul class ="lista-navegacion">
+            <li class ="item-navegacion"><a href="../index.html">Inicio</a></li>
+            <li class ="item-navegacion"><a href="Ejercicio_3.html">Anterior</a></li>
+            <li class ="item-navegacion"><a href="#">Siguiente</a></li>
+            <li class ="item-navegacion"><a href="#">Ultimo</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>EJERCICIO 4</h1>
+        <p>Una emisora con presencia en diferentes ciudades desea conocer el rating de canciones y cantantes más
+            escuchados (sonados) en este semestre del año. Por lo tanto, se ha pedido a estudiantes del SENA del
+            programa de tecnólogo en análisis y desarrollo de software desarrollar una solución que permita conocer
+            la respuesta de 6 personas con relación a sus gustos musicales. Con fines administrativos y realizar una
+            rifa entre las personas encuestadas, la emisora desea poder registrar de las personas entrevistadas su
+            nombre, número de identificación (cédula), fecha de nacimiento, correo electrónico, ciudad de residencia,
+            ciudad de origen. Además, se deberá poder almacenar el artista y título de hasta 3 canciones favoritas en 
+            cada una de las personas que se ingrese, teniendo en cuenta lo anterior, se sugiere que la solución deberá
+            mostrar un menú que permite las siguientes opciones:</p>
+        <ul class="lista_opciones">
+            <li class="opcion"><a>Agregar una persona con los datos que se listan anteriormente.</a></li>
+            <li class="opcion"><a>Mostrar la información personal de una persona particular por medio de su posición en el vector.</a></li>
+        </ul>
+        <div>
+            <form name="registrar" action="#">
+                <button class="btn-Calcular">Registrar personas</button>
+            </form>
+        </div>
+        <p id="Resultados"></p>
+        <div class ="tablas">
+            <table id="espacio_tabla_arreglos"></table>
+        </div>
+        <div class ="tablas">
+        <table id="espacio_tabla_resultados"></table>
+        </div>
+        <script src="Ejercicio_4.js"></script>
+    </main>
+    <footer><img src="/img/LogoSENA.png"></footer>
+</body>
+</html>
