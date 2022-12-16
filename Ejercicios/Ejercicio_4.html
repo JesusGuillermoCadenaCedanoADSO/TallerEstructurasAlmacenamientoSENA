@@ -10,14 +10,34 @@
         .tablas {
                 padding: 2%;
             }
-        .btn-Calcular {
-            font-size: large;
-        }
+        
         .lista_opciones {
             text-align: left;
         }
         .lista_opciones .opcion{
             padding: 6px;
+        }
+        .btn-Mostrar {
+
+            font-size: large;
+        }
+        .btn-IngresarPersona{
+            margin: 2%;
+            font-size: large;
+        }
+        .btn-Elegir {
+            margin: 2%;
+            font-size: large;
+        }
+        .btn-Terminar {
+            margin: 2%;
+            font-size: large;
+        }
+        .espacio_formulario{
+            display: none;
+        }
+        .espacio_formulario.btn-Mostrar{
+            display: block;
         }
     </style>
 </head>
@@ -50,17 +70,44 @@
             <li class="opcion"><a>Agregar una persona con los datos que se listan anteriormente.</a></li>
             <li class="opcion"><a>Mostrar la información personal de una persona particular por medio de su posición en el vector.</a></li>
         </ul>
-        <div>
-            <form name="registrar" action="#">
-                <button class="btn-Calcular">Registrar personas</button>
-            </form>
+
+        <div class ="container">
+            <button class="btn-Mostrar">Registrar personas</button>
+            <div class="espacio_formulario">
+                <form name="ingreso_personas" action="">
+                    <label for="nombre_persona"><b>Nombre</b></label><br>
+                    <input class="ingreso_dato" type="text" name="nombre_persona"><br>
+                    <label for="id_persona"><b>Identificación</b></label><br>
+                    <input class="ingreso_dato" type="text" name="id_persona"><br>
+                    <label for="fecha_nacimiento"><b>Fecha de nacimiento</b></label><br>
+                    <input class="ingreso_dato" type="text" name="fecha_nacimiento"><br>
+                    <label for="correo_electronico"><b>Correo electrónico</b></label><br>
+                    <input class="ingreso_dato" type="text" name="correo_electronico"><br>
+                    <label for="ciudad_residencia"><b>Ciudad de residencia</b></label><br>
+                    <input class="ingreso_dato" type="text" name="ciudad_residencia"><br>
+                    <label for="ciudad_origen"><b>Ciudad de origen</b></label><br>
+                    <input class="ingreso_dato" type="text" name="ciudad_origen"><br>
+                    <button class="btn-IngresarPersona">Ingresar</button>
+                </form>
+            </div>
         </div>
-        <p id="Resultados"></p>
-        <div class ="tablas">
-            <table id="espacio_tabla_arreglos"></table>
-        </div>
+        <p id="Lista_personas"></p>
         <div class ="tablas">
         <table id="espacio_tabla_resultados"></table>
+        </div>
+        <div class ="container">
+            <button class="btn-Elegir">Elegir persona</button>
+            <!-- <div class="hidden-content">
+                <h3>Diagrama de flujo</h3>
+                <img src="img/Punto3.jpg">
+            </div> -->
+        <!-- </div>
+        <div class ="container"> -->
+            <button class="btn-Terminar">Terminar programa</button>
+            <!-- <div class="hidden-content">
+                <h3>Diagrama de flujo</h3>
+                <img src="img/Punto3.jpg">
+            </div> -->
         </div>
         <script src="Ejercicio_4.js"></script>
     </main>
