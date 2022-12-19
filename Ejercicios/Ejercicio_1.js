@@ -36,7 +36,8 @@ function funcion_calcular(e)
   
     document.getElementById("figura_seleccionada").innerText ='la Figura seleccionada es: ' + FiguraSeleccionada;
     document.getElementById("resultado_perimetro").innerText ='El perímetro es: ' + perimetro + ' cm';
-    document.getElementById("resultado_area").innerText ='El área es: ' + area + ' cm ^ 2';
+    
+    document.getElementById("resultado_area").innerText ='El área es: ' + area + ' cm ^ 2 ';
 }
 
 button.addEventListener("click",funcion_calcular);

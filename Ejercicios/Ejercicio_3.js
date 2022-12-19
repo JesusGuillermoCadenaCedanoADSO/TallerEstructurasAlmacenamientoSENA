@@ -1,22 +1,22 @@
 const button = document.querySelector('.btn-Calcular');
 
 function NumeroALetras(val){
-    var answer="";
+    var answer = "";
     switch(val){
         case 0:
-            answer='primer';
+            answer = 'primer';
             break;
         case 1:
-            answer='segundo';
+            answer = 'segundo';
             break;
         case 2:
-            answer="tercer";
+            answer = "tercer";
             break;
         case 3:
-            answer='cuarto';
+            answer = 'cuarto';
             break;
         case 4:
-            answer='quinto';
+            answer = 'quinto';
     }
     return answer;
 }
@@ -28,7 +28,7 @@ function ingresar_vector(n_arreglo)
     var arreglo = [];
     var i = 0;
     var numero_ingresado = '';
-    while(i<=4){
+    while(i <= 4){
         var numero = 0;
         numero_ingresado = NumeroALetras(Number(i));
          do{
@@ -58,14 +58,13 @@ function ingresar_vector(n_arreglo)
 
 
 function funcion_calcular(e)
-{   
+{   e.preventDefault();
     document.getElementById("espacio_tabla_arreglos").innerHTML = "";
     document.getElementById("espacio_tabla_resultados").innerHTML = "";
     document.getElementById('espacio_tabla_arreglos').setAttribute("border","1px solid #000");
     document.getElementById('espacio_tabla_arreglos').setAttribute("align","center");
     document.getElementById('espacio_tabla_resultados').setAttribute("border","1px solid #000");
     document.getElementById('espacio_tabla_resultados').setAttribute("align","center");
-    e.preventDefault();
     var vector_1 = ingresar_vector('vector 1');
     var vector_2 = ingresar_vector('vector 2');
     var vector_3 = [];
@@ -78,7 +77,7 @@ function funcion_calcular(e)
             var textoCelda_1 = document.createTextNode("Arreglo_1");
             var textoCelda_2 = document.createTextNode("Arreglo_2");
         }else{
-            var hilera = document.getElementById('espacio_tabla_arreglos').insertRow(i+1);
+            var hilera = document.getElementById('espacio_tabla_arreglos').insertRow(i + 1);
             var celda_1 = document.createElement("td");
             var celda_2 = document.createElement("td");
             var textoCelda_1 = document.createTextNode(vector_1[i]);
@@ -98,13 +97,13 @@ function funcion_calcular(e)
         hilera.appendChild(celda_2);
     }
     vector_3.sort(function(a, b){return a - b});
-    for (var i=-1;i<vector_3.length;i++){
-        if (i==-1){
+    for (var i =- 1;i < vector_3.length;i++){
+        if (i == -1){
             var hilera_resultados = document.getElementById('espacio_tabla_resultados').insertRow(0);
             var celda = document.createElement("th");
             var textoCelda = document.createTextNode("Arreglo_combinado");
         }else{
-            var hilera_resultados = document.getElementById('espacio_tabla_resultados').insertRow(i+1);
+            var hilera_resultados = document.getElementById('espacio_tabla_resultados').insertRow(i + 1);
             var celda = document.createElement("td");
             var textoCelda = document.createTextNode(vector_3[i]);
         }

@@ -1,5 +1,40 @@
 const button = document.querySelector('.btn-Calcular');
 
+function NumeroALetras(val){
+    var answer="";
+    switch(val){
+        case 0:
+            answer='primer';
+            break;
+        case 1:
+            answer='segunda';
+            break;
+        case 2:
+            answer="tercera";
+            break;
+        case 3:
+            answer='cuarta';
+            break;
+        case 4:
+            answer='quinta';
+            break;
+        case 5:
+            answer='sexta';
+            break;
+        case 6:
+            answer='séptima';
+            break;
+        case 7:
+            answer='octava';
+            break;
+        case 8:
+            answer='novena';
+            break;
+        case 9:
+            answer='décima';
+    }
+    return answer;
+}
 
 function funcion_calcular(e)
 {
@@ -16,9 +51,12 @@ function funcion_calcular(e)
     while(i<=9){
         var numero = 0;
          do{
-            numero = Number(prompt("digitar edad entre 1 y 120 años"));
-            if (isNaN(numero) || numero < 1 || numero > 120){
-                alert('Ingresar edad correctamente')
+            numero = Number(prompt("digitar " + NumeroALetras(Number(i)) +" edad entre 1 y 120 años"));
+            if (isNaN(numero)){
+                alert('Ingresar valor numérico')
+            }
+            if(numero < 1 || numero > 120){
+                alert('Ingresar número entre 1 y 120')
             }
         }while (isNaN(numero) || numero < 1 || numero > 120); 
        
@@ -51,8 +89,8 @@ function funcion_calcular(e)
 
     document.getElementById("Resultados").innerText = 'RESULTADOS';
     document.getElementById("Lista_Edades").innerHTML = ListaEdades;
-    document.getElementById("Numero_Menores").innerText = 'La cantidad de menores de edad es: ' + menores;
-    document.getElementById("Numero_Mayores").innerText = 'La cantidad de mayores de edad es: ' + mayores;
+    document.getElementById("Numero_Menores").innerText = 'La cantidad de menores de edad (edad <= 18) es: ' + menores;
+    document.getElementById("Numero_Mayores").innerText = 'La cantidad de mayores de edad (18 < edad < 60) es: ' + mayores;
     document.getElementById("Numero_Adultos_Mayores").innerText = 'La cantidad de adultos mayores de 59 años de edad es: ' + adultos_mayores;
     document.getElementById("Menor_Edad").innerText = 'La menor edad es: ' + menor_edad;
     document.getElementById("Mayor_Edad").innerText = 'La mayor edad es: ' + mayor_edad;
