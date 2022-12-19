@@ -10,7 +10,7 @@
         .tablas {
                 padding: 2%;
             }
-        
+
         .lista_opciones {
             text-align: left;
         }
@@ -43,7 +43,7 @@
 </head>
 <body>
     <header>
-        <h1>RESOLUCIÓN A PROBLEMAS ALGORÍTMICOS 
+        <h1>RESOLUCIÓN A PROBLEMAS ALGORÍTMICOS
             APLICANDO ESTRUCTURAS DE ALMACENAMIENTO</h1>
     </header>
     <aside></aside>
@@ -63,7 +63,7 @@
             la respuesta de 6 personas con relación a sus gustos musicales. Con fines administrativos y realizar una
             rifa entre las personas encuestadas, la emisora desea poder registrar de las personas entrevistadas su
             nombre, número de identificación (cédula), fecha de nacimiento, correo electrónico, ciudad de residencia,
-            ciudad de origen. Además, se deberá poder almacenar el artista y título de hasta 3 canciones favoritas en 
+            ciudad de origen. Además, se deberá poder almacenar el artista y título de hasta 3 canciones favoritas en
             cada una de las personas que se ingrese, teniendo en cuenta lo anterior, se sugiere que la solución deberá
             mostrar un menú que permite las siguientes opciones:</p>
         <ul class="lista_opciones">
@@ -76,27 +76,50 @@
             <div class="espacio_formulario">
                 <form name="ingreso_personas" action="">
                     <label for="nombre_persona"><b>Nombre</b></label><br>
-                    <input class="ingreso_dato" type="text" name="nombre_persona"><br>
+                    <!-- <input class="nombre_persona" type="text"><br> -->
+                    <input class="nombre_persona" type="text" value ='a'><br>
                     <label for="id_persona"><b>Identificación</b></label><br>
-                    <input class="ingreso_dato" type="text" name="id_persona"><br>
+                    <!-- <input class="id_persona" type="text"><br> -->
+                    <input class="id_persona" type="text" value ='1a'><br>
                     <label for="fecha_nacimiento"><b>Fecha de nacimiento</b></label><br>
-                    <input class="ingreso_dato" type="text" name="fecha_nacimiento"><br>
+                    <!-- <input class="fecha_nacimiento" type="text"><br> -->
+                    <input class="fecha_nacimiento" type="text" value ='2a'><br>
                     <label for="correo_electronico"><b>Correo electrónico</b></label><br>
-                    <input class="ingreso_dato" type="text" name="correo_electronico"><br>
+                    <!-- <input class="correo_electronico" type="text"><br> -->
+                    <input class="correo_electronico" type="text" value ='3a'><br>
                     <label for="ciudad_residencia"><b>Ciudad de residencia</b></label><br>
-                    <input class="ingreso_dato" type="text" name="ciudad_residencia"><br>
+                    <!-- <input class="ciudad_residencia" type="text"><br> -->
+                    <input class="ciudad_residencia" type="text" value ='4a'><br>
                     <label for="ciudad_origen"><b>Ciudad de origen</b></label><br>
-                    <input class="ingreso_dato" type="text" name="ciudad_origen"><br>
+                    <!-- <input class="ciudad_origen" type="text"><br> -->
+                    <input class="ciudad_origen" type="text" value ='5a'><br>
+                    <label for="artista"><b>Artista Preferido</b></label><br>
+                    <!-- <input class="artista" type="text"><br> -->
+                    <input class="artista" type="text" value ='6a'><br>
+                    <label for="cancion_1"><b>Primera canción</b></label><br>
+                    <!-- <input class="cancion_1" type="text"><br> -->
+                    <input class="cancion_1" type="text" value = '7a'><br>
+                    <label for="cancion_2"><b>Segunda canción</b></label><br>
+                    <!-- <input class="cancion_2" type="text"><br> -->
+                    <input class="cancion_2" type="text" value = '8a'><br>
+                    <label for="cancion_3"><b>Tercera canción</b></label><br>
+                    <!-- <input class="cancion_3" type="text"><br> -->
+                    <input class="cancion_3" type="text" value = '9a'><br>
                     <button class="btn-IngresarPersona">Ingresar</button>
                 </form>
             </div>
         </div>
-        <p id="Lista_personas"></p>
+        <p id="persona_1"></p>
+        <p id="persona_2"></p>
+        <p id="persona_3"></p>
+        <p id="persona_4"></p>
+        <p id="persona_5"></p>
+        <p id="persona_6"></p>
         <div class ="tablas">
         <table id="espacio_tabla_resultados"></table>
         </div>
         <div class ="container">
-            <button class="btn-Elegir">Elegir persona</button>
+            <button class="btn-Elegir">Seleccionar persona</button>
             <!-- <div class="hidden-content">
                 <h3>Diagrama de flujo</h3>
                 <img src="img/Punto3.jpg">
